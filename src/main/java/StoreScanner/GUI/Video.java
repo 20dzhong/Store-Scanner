@@ -23,21 +23,19 @@ class Video {
         webcam.setViewSize(WebcamResolution.VGA.getSize());
     }
 
-    static void setWebcam(int cameraNum) {
-        List<Webcam> webcamList = Webcam.getWebcams();
-        if (webcamList.size() > 1 && cameraNum < webcamList.size()) webcam = webcamList.get(cameraNum);
-    }
-
     static JPanel getFrameAsPanel() {
         panel = new WebcamPanel(webcam);
         panel.setFPSDisplayed(true);
         panel.setDisplayDebugInfo(true);
         panel.setImageSizeDisplayed(true);
         panel.setMirrored(true);
-
         return panel;
     }
 
+    static void setWebcam(int cameraNum) {
+        List<Webcam> webcamList = Webcam.getWebcams();
+        if (webcamList.size() > 1 && cameraNum < webcamList.size()) webcam = webcamList.get(cameraNum);
+    }
 
     static BufferedImage getFrameAsImage() {
         webcam.open();
@@ -54,7 +52,7 @@ class Video {
         running = true;
     }
 
-    static boolean isRunning() {
+    public static boolean isRunning() {
         return running;
     }
 }

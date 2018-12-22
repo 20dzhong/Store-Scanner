@@ -1,19 +1,16 @@
 package StoreScanner.GUI;
 
-import StoreScanner.utils.QREditor;
-import StoreScanner.utils.Convert;
 import StoreScanner.utils.Name;
+import StoreScanner.utils.Variable;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class SwingUI extends JFrame implements ActionListener {
-    protected static Name id;
 
-    SwingUI() throws InterruptedException {
+    SwingUI() {
         JMenuBar menuBar = new JMenuBar();
 
         JMenu menuFile = new JMenu("File");
@@ -37,47 +34,8 @@ public class SwingUI extends JFrame implements ActionListener {
         exit.setActionCommand("exit");
         add(exit);
 
-        JButton test = new JButton("Test");
-        test.addActionListener(this);
-        test.setActionCommand("test");
-        add(test);
-
         add(Video.getFrameAsPanel());
-        // startScan();
 
-
-    }
-
-    public void startScan() throws InterruptedException {
-        while (true) {
-            wait();
-            try {
-                System.out.println("Scan starting...");
-                if (!Video.isRunning()) Video.run();
-                while (true) {
-                    Thread.sleep(500);
-                    id = QREditor.decodeQR(Video.getFrameAsImage());
-                    try {
-                        if (id.isEmpty) throw new AssertionError("No QR code found! Hence, no identifier.");
-                        break;
-                    } catch (AssertionError ignored) { }
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-                System.out.println("Scanning thread interrupted!");
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("Errors occurred in decoding the QR code");
-            } finally {
-                System.out.println("\nTarget found, exiting scanning thread");
-            }
-            Video.pause();
-            id.printInfo();
-        }
-    }
-
-    public void testing() {
-        System.out.println("Hello world");
     }
 
     @Override
@@ -88,15 +46,12 @@ public class SwingUI extends JFrame implements ActionListener {
                 System.exit(0);
                 break;
             case "rescan":
-                notify();
-                break;
-            case "test":
-                testing();
+                new StreamThread();
                 break;
         }
     }
 
-    public static void showUI() throws InterruptedException {
+    public static void showUI() {
         JFrame window = new SwingUI();
 
         Image icon = new ImageIcon("./src/main/java/Images/gothub.png").getImage();
@@ -109,11 +64,5 @@ public class SwingUI extends JFrame implements ActionListener {
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
         window.pack();
 
-    }
-}
-
-class reee {
-    public static void main(String[] args) throws InterruptedException {
-        SwingUI.showUI();
     }
 }

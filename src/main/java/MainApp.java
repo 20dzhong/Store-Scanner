@@ -36,7 +36,7 @@ public class MainApp {
 
         // SwingUI.accountUI(SwingUI.startScan());
 
-        System.exit(0);
+        SwingUI.showUI();
     }
 
 }

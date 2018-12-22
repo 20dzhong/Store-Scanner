@@ -1,6 +1,5 @@
 package StoreScanner.utils;
 
-import StoreScanner.Constants;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
@@ -20,7 +19,7 @@ public class QREditor {
 
     private static void generateQRCodeImage(String text, String filePath) throws WriterException, IOException {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, Constants.width, Constants.height);
+        BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, Constant.width, Constant.height);
 
         Path path = FileSystems.getDefault().getPath(filePath);
 

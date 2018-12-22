@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="795bbf24-0766-46f0-a5b1-eb867f7d3fcf" name="Default Changelist" comment="" />
+    <list default="true" id="795bbf24-0766-46f0-a5b1-eb867f7d3fcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Variable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/StoreScanner/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/StreamThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/StreamThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/SwingUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/SwingUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/Video.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/reee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/StoreScanner/GUI/reee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -17,43 +35,132 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="939">
-              <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2351#2352#0" expanded="true" />
-                <element signature="e#2400#2401#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/settings/ideSetting/java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4617">
-              <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.48857993">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="235">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1699#1700#0" expanded="true" />
+                    <element signature="e#1729#1730#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="722">
+                  <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+                  <folding>
+                    <element signature="e#186#187#0" expanded="true" />
+                    <element signature="e#216#217#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Convert.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="38">
+                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Constant.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Variable.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="722">
+                  <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="864">
+                  <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1698#1699#0" expanded="true" />
+                    <element signature="e#1723#1724#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="959">
+                  <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,7 +183,19 @@
       <find>REEEEE</find>
       <find>showUI</find>
       <find>WebcamPanel</find>
+      <find>webcam.</find>
+      <find>paintComponent</find>
+      <find>defaultPainter</find>
+      <find>Graphics2D</find>
+      <find>getImage</find>
+      <find>start()</find>
+      <find>setFPSD</find>
+      <find>update()</find>
+      <find>.getName</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -88,20 +207,26 @@
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Processes/ReadQR.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Processes/QRReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Processes/QRMaker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/VideoStream.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/ProcessThread.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Processes/QREditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Convert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/TestUI.java" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/VideoStream.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/VideoPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/VnC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Variable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/TestUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java" />
         <option value="$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java" />
       </list>
     </option>
@@ -112,6 +237,7 @@
     <option name="width" value="2520" />
     <option name="height" value="1340" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -159,6 +285,30 @@
               <item name="StoreScanner" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Store-Scanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Store-Scanner" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="StoreScanner" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Store-Scanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Store-Scanner" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Store-Scanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Store-Scanner" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="TestImages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -170,9 +320,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545405709411" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545473728001" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-threads-intro" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -181,11 +331,11 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/Images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/TestImages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.reee">
+  <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainApp" />
       <module name="athenian.org.Store-Scanner.main" />
@@ -208,50 +358,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StoreScanner.GUI.TestUI" />
-      <module name="athenian.org.Store-Scanner.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StoreScanner.GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StoreScanner.GUI.ree" />
-      <module name="athenian.org.Store-Scanner.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StoreScanner.GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="reee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StoreScanner.GUI.reee" />
-      <module name="athenian.org.Store-Scanner.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="StoreScanner.GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.reee" />
-        <item itemvalue="Application.ree" />
-        <item itemvalue="Application.TestUI" />
         <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
@@ -269,12 +377,12 @@
       <workItem from="1545265842358" duration="23045000" />
       <workItem from="1545357116996" duration="3455000" />
       <workItem from="1545363848413" duration="21625000" />
-      <workItem from="1545406575666" duration="1269000" />
+      <workItem from="1545406575666" duration="16755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49394000" />
+    <option name="totallyTimeSpent" value="64880000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,7 +397,7 @@
     <frame x="20" y="39" width="2520" height="1340" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18163265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17795919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -298,13 +406,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.29692307" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49957806" weight="0.21846154" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49957806" weight="0.31335616" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991453" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32962328" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32846153" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50042194" side_tool="true" weight="0.32393163" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.21452992" />
@@ -343,15 +451,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java</url>
-          <line>111</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -367,13 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sarxos/webcam-capture/0.3.10/ed7b0e3a22e78d40fa5c88786979f114345129c8/webcam-capture-0.3.10-sources.jar!/com/github/sarxos/webcam/WebcamPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -394,14 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sarxos/webcam-capture/0.3.10/ed7b0e3a22e78d40fa5c88786979f114345129c8/webcam-capture-0.3.10-sources.jar!/com/github/sarxos/webcam/Webcam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="726" lean-forward="true" selection-start-line="726" selection-end-line="726" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/VideoStream.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/ProcessThread.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/TestImages/test1.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/MainUI.java" />
@@ -427,35 +514,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Convert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Images/gothub.png">
       <provider selected="true" editor-type-id="images" />
@@ -518,46 +578,116 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/TestUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java">
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="19">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/settings/ideSetting/java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="420">
+          <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sarxos/webcam-capture/0.3.10/ed7b0e3a22e78d40fa5c88786979f114345129c8/webcam-capture-0.3.10-sources.jar!/com/github/sarxos/webcam/WebcamListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sarxos/webcam-capture/0.3.10/ed7b0e3a22e78d40fa5c88786979f114345129c8/webcam-capture-0.3.10-sources.jar!/com/github/sarxos/webcam/Webcam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1331">
+          <caret line="898" column="18" selection-start-line="898" selection-start-column="18" selection-end-line="898" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/VideoPanel.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sarxos/webcam-capture/0.3.10/ed7b0e3a22e78d40fa5c88786979f114345129c8/webcam-capture-0.3.10-sources.jar!/com/github/sarxos/webcam/WebcamPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2736">
+          <caret line="181" column="34" selection-start-line="181" selection-start-column="29" selection-end-line="181" selection-end-column="37" />
+          <folding>
+            <element signature="e#16887#16888#0" expanded="true" />
+            <element signature="e#16912#16913#0" expanded="true" />
+            <element signature="e#20120#20121#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Convert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Variable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/Video.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        <state relative-caret-position="235">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/StreamThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/settings/ideSetting/java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4617">
-          <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/QREditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="722">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -566,12 +696,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/GUI/SwingUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="939">
-          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+        <state relative-caret-position="959">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2400#2401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StoreScanner/utils/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
           </folding>
         </state>
       </provider>

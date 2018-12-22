@@ -6,7 +6,9 @@ public class Name {
     private String identifier;
     public Boolean isEmpty;
 
-    public Name() { isEmpty = true; }
+    public Name() {
+        isEmpty = true;
+    }
 
     public Name(String firstName, String lastName) {
         this.firstName = firstName.toLowerCase();
@@ -32,9 +34,13 @@ public class Name {
     }
 
     public void printInfo() {
-        System.out.println("\n");
-        System.out.println(this.encryptedIdentifier());
-        System.out.println(this.getIdentifier());
-        System.out.println("First: " + this.getFirstName() + "\nLast: " + this.getLastName() + "\n\n");
+        if (!this.isEmpty) {
+            System.out.println("\n");
+            System.out.println(this.encryptedIdentifier());
+            System.out.println(this.getIdentifier());
+            System.out.println("First: " + this.getFirstName() + "\nLast: " + this.getLastName() + "\n\n");
+        } else {
+            System.out.println("Current name is empty");
+        }
     }
 }
