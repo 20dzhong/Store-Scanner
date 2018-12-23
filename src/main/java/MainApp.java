@@ -1,3 +1,4 @@
+import StoreScanner.GUI.FXUI;
 import Test.SwingUI;
 
 import java.io.IOException;
@@ -37,7 +38,6 @@ public class MainApp {
 
         // Config delay time, system config page
 
-        SwingUI.showUI();
+        FXUI.show();
     }
-
 }
