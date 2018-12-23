@@ -1,5 +1,7 @@
 package StoreScanner.utils;
 
+import javafx.scene.control.Label;
+
 /**
  * This is an absolutely horrendous showcase of my laziness and brute force VnC stands for Variable and Constants
  * Since there is no global variable in Java, instead of trying to figure out how to make the program work without
@@ -7,7 +9,10 @@ package StoreScanner.utils;
  */
 
 public final class Variable {
-    private Variable() { }
+    private Variable() {
+    }
 
-    public static Name id;
+    public static Boolean scanRunning = false;
+    public static Label status = new Label("No scan is running at the moment");
+    public static ID id = new ID("Donovan", "Zhong");
 }

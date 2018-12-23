@@ -9,15 +9,16 @@ public class Convert {
     }
 
     public static String toChar(String text) {
-        String[] splited = text.substring(1, text.length()-1).split(":");
+        String[] splited = text.substring(1, text.length() - 1).split(":");
         StringBuilder builder = new StringBuilder();
         for (String index : splited) builder.append((char) (int) Integer.valueOf(index));
         return builder.toString();
     }
 
-    public static String toLabel(Name id) {
-        if(id.isEmpty) return("No QR code found in the image.");
-        else return("ID Found!\nEncrypted ID: " + id.encryptedIdentifier() + "\nIdentifier: "+ id.getIdentifier() + "\nfirst name: " + id.getFirstName()
-        + "\nlast name: " + id.getLastName());
+    public static String toLabel(ID id) {
+        if (id.isEmpty) return ("No QR code found in the image.");
+        else
+            return ("ID Found!\nEncrypted ID: " + id.encryptedIdentifier() + "\nIdentifier: " + id.getIdentifier() + "\nfirst name: " + id.getFirstName()
+                    + "\nlast name: " + id.getLastName());
     }
 }

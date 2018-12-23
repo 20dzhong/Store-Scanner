@@ -1,6 +1,6 @@
-package StoreScanner.GUI;
+package Test;
 
-import StoreScanner.utils.Name;
+import StoreScanner.GUI.Video;
 import StoreScanner.utils.Variable;
 
 import javax.swing.*;
@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class SwingUI extends JFrame implements ActionListener {
 
-    SwingUI() {
+    public SwingUI() {
         JMenuBar menuBar = new JMenuBar();
 
         JMenu menuFile = new JMenu("File");
@@ -46,7 +46,8 @@ public class SwingUI extends JFrame implements ActionListener {
                 System.exit(0);
                 break;
             case "rescan":
-                new StreamThread();
+                if (!Variable.scanRunning) new Video.ProcessStream();
+                else System.out.println("Scan is already running!");
                 break;
         }
     }
