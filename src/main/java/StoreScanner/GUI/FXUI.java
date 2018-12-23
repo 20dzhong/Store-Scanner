@@ -18,6 +18,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+
 import StoreScanner.GUI.Video;
 import StoreScanner.utils.Constant;
 import StoreScanner.utils.Variable;
@@ -43,6 +44,7 @@ import javax.swing.*;
 //import java.awt.*;
 // import java.awt.Color;
 import javafx.scene.paint.*;
+
 import java.util.EventObject;
 
 public class FXUI extends Application {
@@ -91,9 +93,12 @@ public class FXUI extends Application {
         Text bName = new Text("Account Balance");
         TextField bField = new TextField(Variable.id.getBalance());
         bField.setStyle("-fx-text-inner-color: green;");
-
         bField.setOpacity(1.0);
         bField.setDisable(true);
+
+        // total deduction
+        Text dName = new Text("Deduction");
+        TextField dField = new TextField("0.0");
 
         //Creating Buttons
         Button submit = new Button("Submit");
@@ -110,6 +115,7 @@ public class FXUI extends Application {
         leftPane.add(fName, x, y + 2);
         leftPane.add(lName, x, y + 3);
         leftPane.add(bName, x, y + 6);
+        leftPane.add(dName, x, y + 7);
 
         // adding corresponding elements
         leftPane.add(eIDText, x + 1, y - 3);
@@ -117,6 +123,7 @@ public class FXUI extends Application {
         leftPane.add(fNText, x + 1, y + 2);
         leftPane.add(lNText, x + 1, y + 3);
         leftPane.add(bField, x + 1, y + 6);
+        leftPane.add(dField, x + 1, y + 7);
 
 
         // Arranging all the nodes in the grid
@@ -142,11 +149,10 @@ public class FXUI extends Application {
             if (!Variable.scanRunning) {
                 new Video.ProcessStream();
                 Variable.status.setText("Scan started");
-                Variable.status.setTextFill(Color.color(0,0,0));
-            }
-            else {
+                Variable.status.setTextFill(Color.color(0, 0, 0));
+            } else {
                 Variable.status.setText("Scan already running! Cannot initialize another scan before this one finishes");
-                Variable.status.setTextFill(Color.color(1,0,0));
+                Variable.status.setTextFill(Color.color(1, 0, 0));
             }
 
         };
