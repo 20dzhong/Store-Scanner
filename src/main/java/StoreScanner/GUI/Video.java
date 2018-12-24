@@ -94,15 +94,12 @@ public class Video {
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 System.out.println("Scanning thread interrupted!");
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("Errors occurred in decoding the QR code");
             } finally {
                 Variable.scanRunning = false;
 
                 // TODO WHEN Process thread notify the update thread, update the text there after checking if it's filled
                 // Variable.status.setText("Target found, exiting scanning thread.");
-                Variable.status.setTextFill(Color.color(0,0.5,0));
+                Variable.status.setTextFill(Color.color(0,0.75,0));
                 System.out.println("\nTarget found, exiting scanning thread");
             }
             Video.pause();

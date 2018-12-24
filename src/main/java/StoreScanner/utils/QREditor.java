@@ -47,7 +47,7 @@ public class QREditor {
         return getName(bufferedImage);
     }
 
-    public static ID decodeQR(BufferedImage qrCodeimage) throws IOException {
+    public static ID decodeQR(BufferedImage qrCodeimage) {
         return getName(qrCodeimage);
     }
 

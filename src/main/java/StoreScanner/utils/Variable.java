@@ -13,6 +13,6 @@ public final class Variable {
     }
 
     public static Boolean scanRunning = false;
-    public static Label status = new Label("No scan is running at the moment");
+    public static Label status = new Label("Scanning...");
     public static ID id = new ID("Donovan", "Zhong");
 }

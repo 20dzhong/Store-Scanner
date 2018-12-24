@@ -1,4 +1,4 @@
-package Test;
+package StoreScanner.utils.Test;
 
 import StoreScanner.GUI.Video;
 import StoreScanner.utils.Constant;
@@ -71,7 +71,7 @@ public class FXTest extends Application {
 
         // account balance
         Text bName = new Text("Account Balance");
-        TextField bField = new TextField(Variable.id.getBalance());
+        TextField bField = new TextField("$ " + Variable.id.getBalance());
         bField.setStyle("-fx-text-inner-color: green;");
 
         bField.setOpacity(1.0);

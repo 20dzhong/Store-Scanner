@@ -1,4 +1,4 @@
-package Test.FXWrapper;
+package StoreScanner.utils.Test.FXWrapper;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;

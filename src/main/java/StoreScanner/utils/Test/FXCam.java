@@ -1,4 +1,4 @@
-package Test;
+package StoreScanner.utils.Test;
 
 import java.awt.image.BufferedImage;
 import java.util.concurrent.atomic.AtomicReference;
@@ -73,7 +73,6 @@ public class FXCam extends Application {
 	private ImageView imgWebCamCapturedImage;
 	private Webcam webCam = null;
 	private boolean stopCamera = false;
-	private BufferedImage grabbedImage;
 	private ObjectProperty<Image> imageProperty = new SimpleObjectProperty<Image>();
 	private BorderPane webCamPane;
 	private Button btnCamreaStop;

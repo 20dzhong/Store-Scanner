@@ -52,8 +52,8 @@ public class ID {
         return email;
     }
 
-    public String getBalance() {
-        return ("$ " + balance);
+    public Double getBalance() {
+        return balance;
     }
 
     public void printInfo() {

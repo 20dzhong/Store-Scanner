@@ -1,4 +1,4 @@
-package Test.FXWrapper;
+package StoreScanner.utils.Test.FXWrapper;
 
 import com.github.sarxos.webcam.Webcam;
 

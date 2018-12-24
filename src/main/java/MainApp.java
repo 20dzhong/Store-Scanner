@@ -1,5 +1,4 @@
 import StoreScanner.GUI.FXUI;
-import Test.SwingUI;
 
 import java.io.IOException;
 
@@ -7,7 +6,6 @@ import java.io.IOException;
 public class MainApp {
     public static void main(String[] args) throws IOException {
 
-        // TODO checker for what types of QR Code, proper
 
         // TODO change web cam
         // TODO scanning applet and output
@@ -39,5 +37,6 @@ public class MainApp {
         // Config delay time, system config page
 
         FXUI.show();
+
     }
 }
