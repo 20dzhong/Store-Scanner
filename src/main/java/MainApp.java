@@ -8,15 +8,11 @@ public class MainApp {
 
 
         // TODO change web cam
-        // TODO scanning applet and output
-        // TODO Database getter and dumper
-        // TODO Database applet and output
         // TODO Dump
 
 
-        // TODO Delay time?
         // TODO Implement Database Stuff
-
+        // TODO DATABASE INSERTION AND NULLIFIER GUI
 
         // QREditor.generate(new ID("arnav", "gupta"));
         // QREditor.generate(new ID("donovan", "zhong"));

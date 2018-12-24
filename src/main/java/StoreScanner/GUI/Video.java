@@ -5,17 +5,9 @@ import StoreScanner.utils.Variable;
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamPanel;
 import com.github.sarxos.webcam.WebcamResolution;
-import javafx.embed.swing.SwingNode;
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
-import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.List;
 
 public class Video {
@@ -33,7 +25,7 @@ public class Video {
         webcam.setViewSize(WebcamResolution.VGA.getSize());
     }
 
-    public static WebcamPanel getFrameAsPanel() {
+    public static WebcamPanel getStreamAsPanel() {
         panel = new WebcamPanel(webcam);
         panel.setFPSDisplayed(true);
         panel.setDisplayDebugInfo(true);
@@ -96,10 +88,6 @@ public class Video {
                 System.out.println("Scanning thread interrupted!");
             } finally {
                 Variable.scanRunning = false;
-
-                // TODO WHEN Process thread notify the update thread, update the text there after checking if it's filled
-                // Variable.status.setText("Target found, exiting scanning thread.");
-                Variable.status.setTextFill(Color.color(0,0.75,0));
                 System.out.println("\nTarget found, exiting scanning thread");
             }
             Video.pause();

@@ -1,9 +1,11 @@
 package StoreScanner.GUI;
 
 import StoreScanner.utils.Constant;
-import StoreScanner.utils.Convert;
+import StoreScanner.utils.Utility;
+import StoreScanner.utils.ID;
 import StoreScanner.utils.Variable;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -25,13 +27,39 @@ import javafx.scene.control.Label;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-
 public class FXUI extends Application {
 
     private int x = 0;
     private int y = 4;
 
     private double opacity = 0.8;
+
+    // vars for the left panel
+    public static Text encryptedIDLabel;
+    public static Text encryptedID;
+
+    public static Text decryptedIDLabel;
+    public static Text decryptedID;
+
+    public static Text firstNameLabel;
+    public static TextField firstNameField;
+
+    public static Text lastNameLabel;
+    public static TextField lastNameField;
+
+    public static Text emailLabel;
+    public static TextField emailField;
+
+    public static Text balanceLabel;
+    public static TextField balanceField;
+
+    public static Text deductionLabel;
+    public static TextField deductionField;
+
+    public static Text finalBalanceLabel;
+    public static Label finalBalanceField;
+
+    public static Label videoStatus;
 
     @Override
     public void start(Stage stage) {
@@ -48,6 +76,19 @@ public class FXUI extends Application {
         mainPane.add(leftPane, 0, 0);
         mainPane.add(rightPane, 1, 0);
 
+        Thread updateThread = new Thread(() -> {
+            Runnable updater = Utility::periodicUpdater;
+            while (true) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ignore) {
+                }
+                Platform.runLater(updater);
+            }
+        });
+
+        updateThread.setDaemon(true);
+        updateThread.start();
 
         /*
          * Display main scene
@@ -56,8 +97,6 @@ public class FXUI extends Application {
         stage.setTitle("Student Store Scanner");
         stage.setScene(scene);
         stage.show();
-
-        new Video.ProcessStream();
     }
 
     /**
@@ -78,50 +117,50 @@ public class FXUI extends Application {
         GridPane leftPane = initializeGridPane();
 
         // encrypted id grid
-        Text eID = new Text("Encrypted ID");
-        Text eIDText = new Text(Variable.id.encryptedIdentifier());
-        eIDText.setOpacity(opacity - 0.3);
-        eIDText.setDisable(true);
-
+        encryptedIDLabel = new Text("Encrypted ID");
+        encryptedID = new Text(Variable.id.encryptedIdentifier());
+        encryptedID.setOpacity(opacity - 0.3);
+        encryptedID.setDisable(true);
 
         // non encrypted id
-        Text nEID = new Text("Decrypted ID");
-        Text nEIDText = new Text(Variable.id.getIdentifier());
-        nEIDText.setOpacity(opacity - 0.3);
-        nEIDText.setDisable(true);
+        decryptedIDLabel = new Text("Decrypted ID");
+        decryptedID = new Text(Variable.id.getIdentifier());
+        decryptedID.setOpacity(opacity - 0.3);
+        decryptedID.setDisable(true);
 
         // first name grid
-        Text fName = new Text("First Name");
-        TextField fNText = new TextField(Variable.id.getFirstName());
-        fNText.setOpacity(opacity);
-        fNText.setDisable(true);
+        firstNameLabel = new Text("First Name");
+        firstNameField = new TextField(Variable.id.getFirstName());
+        firstNameField.setOpacity(opacity);
+        firstNameField.setDisable(true);
 
         // last name grid
-        Text lName = new Text("Last Name");
-        TextField lNText = new TextField(Variable.id.getLastName());
-        lNText.setOpacity(opacity);
-        lNText.setDisable(true);
+        lastNameLabel = new Text("Last Name");
+        lastNameField = new TextField(Variable.id.getLastName());
+        lastNameField.setOpacity(opacity);
+        lastNameField.setDisable(true);
 
         // email
-        Text eName = new Text("Email");
-        TextField eField = new TextField(Variable.id.getEmail());
-        eField.setOpacity(opacity);
-        eField.setDisable(true);
+        emailLabel = new Text("Email");
+        emailField = new TextField(Variable.id.getEmail());
+        emailField.setOpacity(opacity);
+        emailField.setDisable(true);
 
         // account balance
-        Text bName = new Text("Account Balance");
-        TextField bField = new TextField("$ " + Variable.id.getBalance());
-        bField.setStyle("-fx-text-inner-color: green;");
-        bField.setOpacity(1.0);
-        bField.setDisable(true);
+        balanceLabel = new Text("Account Balance");
+        balanceField = new TextField("$ " + Variable.id.getBalance());
+        balanceField.setStyle("-fx-text-inner-color: green;");
+        balanceField.setOpacity(1.0);
+        balanceField.setDisable(true);
 
         // final balance
-        Text fBalance = new Text("Final Balance");
-        Label fBLabel = new Label("$ " + Variable.id.getBalance());
+        finalBalanceLabel = new Text("Final Balance");
+        finalBalanceField = new Label("$ " + Variable.id.getBalance());
 
         // total deduction
-        Text dName = new Text("Deduction");
-        TextField dField = new TextField("0.0");
+        deductionLabel = new Text("Deduction");
+        deductionField = new TextField("0.0");
+        deductionField.setDisable(true);
 
         // set local variables for balance and calculation
         AtomicReference<Double> balance = new AtomicReference<>(Variable.id.getBalance());
@@ -129,15 +168,15 @@ public class FXUI extends Application {
         AtomicReference<Double> charge = new AtomicReference<>((double) 0);
 
         // preview calculation
-        dField.focusedProperty().addListener((observable, oldValue, newValue) -> {
+        deductionField.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
                 try {
-                    Convert.validate(balance.get(), dField.getText());
-                    charge.set(Double.valueOf(dField.getText()));
+                    Utility.validate(balance.get(), deductionField.getText());
+                    charge.set(Double.valueOf(deductionField.getText()));
                     res.set(balance.get() - charge.get());
-                    Convert.setMessage(fBLabel, 0, 0, 0, "$ " + res.get());
-                } catch (Convert.NegativeException | Convert.ExceedBalanceException | AssertionError e) {
-                    Convert.setMessage(fBLabel, 1, 0, 0, e.getMessage());
+                    Utility.setMessage(finalBalanceField, 0, 0, 0, "$ " + res.get());
+                } catch (Utility.NegativeException | Utility.ExceedBalanceException | AssertionError e) {
+                    Utility.setMessage(finalBalanceField, 1, 0, 0, e.getMessage());
                 }
             }
         });
@@ -146,12 +185,13 @@ public class FXUI extends Application {
         Button submit = new Button("Submit");
         EventHandler<ActionEvent> submitAction = e -> {
             try {
-                Convert.validate(balance.get(), dField.getText());
-                charge.set(Double.valueOf(dField.getText()));
+                Variable.id = new ID("Donovan", "Zhong");
+                Utility.validate(balance.get(), deductionField.getText());
+                charge.set(Double.valueOf(deductionField.getText()));
                 res.set(balance.get() - charge.get());
-                Convert.setMessage(fBLabel, 0, 0, 0, "$ " + res.get());
-            } catch (Convert.ExceedBalanceException | Convert.NegativeException | AssertionError e1) {
-                Convert.setMessage(fBLabel, 1, 0, 0, e1.getMessage());
+                Utility.setMessage(finalBalanceField, 0, 0, 0, "$ " + res.get());
+            } catch (Utility.ExceedBalanceException | Utility.NegativeException | AssertionError e1) {
+                Utility.setMessage(finalBalanceField, 1, 0, 0, e1.getMessage());
             }
         };
         submit.setOnAction(submitAction);
@@ -161,24 +201,24 @@ public class FXUI extends Application {
         exit.setOnAction(exitEvent);
 
         // adding left element 1
-        leftPane.add(eID, x, y - 3);
-        leftPane.add(nEID, x, y - 2);
-        leftPane.add(fName, x, y + 2);
-        leftPane.add(lName, x, y + 3);
-        leftPane.add(eName, x, y + 4);
-        leftPane.add(bName, x, y + 8);
-        leftPane.add(dName, x, y + 9);
-        leftPane.add(fBalance, x, y + 11);
+        leftPane.add(encryptedIDLabel, x, y - 3);
+        leftPane.add(decryptedIDLabel, x, y - 2);
+        leftPane.add(firstNameLabel, x, y + 2);
+        leftPane.add(lastNameLabel, x, y + 3);
+        leftPane.add(emailLabel, x, y + 4);
+        leftPane.add(balanceLabel, x, y + 8);
+        leftPane.add(deductionLabel, x, y + 9);
+        leftPane.add(finalBalanceLabel, x, y + 11);
 
         // adding corresponding elements
-        leftPane.add(eIDText, x + 1, y - 3);
-        leftPane.add(nEIDText, x + 1, y - 2);
-        leftPane.add(fNText, x + 1, y + 2);
-        leftPane.add(lNText, x + 1, y + 3);
-        leftPane.add(eField, x + 1, y + 4);
-        leftPane.add(bField, x + 1, y + 8);
-        leftPane.add(dField, x + 1, y + 9);
-        leftPane.add(fBLabel, x + 1, y + 11);
+        leftPane.add(encryptedID, x + 1, y - 3);
+        leftPane.add(decryptedID, x + 1, y - 2);
+        leftPane.add(firstNameField, x + 1, y + 2);
+        leftPane.add(lastNameField, x + 1, y + 3);
+        leftPane.add(emailField, x + 1, y + 4);
+        leftPane.add(balanceField, x + 1, y + 8);
+        leftPane.add(deductionField, x + 1, y + 9);
+        leftPane.add(finalBalanceField, x + 1, y + 11);
 
         // Arranging all the nodes in the grid
         leftPane.add(submit, x, 20);
@@ -194,27 +234,25 @@ public class FXUI extends Application {
         GridPane rightPane = initializeGridPane();
 
         // adding video container by converting swing node
-        final SwingNode swingNode = new SwingNode();
-        createSwingContent(swingNode);
+        final SwingNode videoNode = new SwingNode();
+        createSwingContent(videoNode, Video.getStreamAsPanel());
         StackPane streamHolder = new StackPane();
-        streamHolder.getChildren().add(swingNode);
+        streamHolder.getChildren().add(videoNode);
 
         // creating buttons for operation
-        Button reScan = new Button("Rescan");
+        Button reScan = new Button("Scan");
         EventHandler<ActionEvent> reScanProcess = e -> {
             if (!Variable.scanRunning) {
                 new Video.ProcessStream();
-                Variable.status.setText("Scan starting...");
-                Variable.status.setTextFill(Color.color(0, 0, 0));
+                videoStatus.setText("Scan starting...");
+                videoStatus.setTextFill(Color.color(0, 0, 0));
             } else {
-                Variable.status.setText("Scan already running! Cannot initialize another scan before this one finishes");
-                Variable.status.setTextFill(Color.color(1, 0, 0));
+                videoStatus.setText("Scan already running! Cannot initialize another scan before this one finishes");
+                videoStatus.setTextFill(Color.color(1, 0, 0));
             }
         };
-
         reScan.setOnAction(reScanProcess);
 
-        // TODO make this work!
         Button pauseButton = new Button("Pause");
         EventHandler<ActionEvent> pauseProcess = e -> Video.pause();
         pauseButton.setOnAction(pauseProcess);
@@ -223,6 +261,7 @@ public class FXUI extends Application {
         EventHandler<ActionEvent> resumeProcess = e -> Video.run();
         resumeButton.setOnAction(resumeProcess);
 
+        videoStatus = new Label("No scan running at the moment");
 
         // add buttons
         GridPane southEast = new GridPane();
@@ -233,17 +272,14 @@ public class FXUI extends Application {
 
         // adding main stream element
         rightPane.add(streamHolder, x, y - 3);
-        rightPane.add(Variable.status, x, y - 2);
+        rightPane.add(videoStatus, x, y - 2);
         rightPane.add(southEast, x + 1, y - 3);
         return rightPane;
     }
 
     // converts swing component into FX node
-    private void createSwingContent(final SwingNode swingNode) {
-        SwingUtilities.invokeLater(() -> {
-            swingNode.setContent(Video.getFrameAsPanel());
-            Video.getFrameAsPanel();
-        });
+    private void createSwingContent(final SwingNode swingNode, JComponent comp) {
+        SwingUtilities.invokeLater(() -> swingNode.setContent(comp));
     }
 
     private GridPane initializeGridPane() {

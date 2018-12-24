@@ -1,7 +1,6 @@
 package StoreScanner.utils;
 
 import javafx.beans.NamedArg;
-import org.bridj.ann.Name;
 
 public class ID {
     private String firstName;
@@ -14,6 +13,11 @@ public class ID {
 
     public ID() {
         isEmpty = true;
+        firstName = "null";
+        lastName = "null";
+        identifier = "";
+        email = "null";
+        balance = 0;
     }
 
     public ID(@NamedArg("First Name") String firstName, @NamedArg("Last Name") String lastName) {
@@ -22,8 +26,8 @@ public class ID {
         this.identifier = (firstName + "_" + lastName).toLowerCase();
 
 
-        this.balance = 234;
-        this.email = "20dzhong@athenian.org";
+        this.balance = 1000.0;
+        this.email = "20" + this.firstName.substring(0,1) + this.lastName + "@athenian.org";
 
         isEmpty = false;
     }
@@ -45,7 +49,7 @@ public class ID {
     }
 
     public String encryptedIdentifier() {
-        return Convert.toAscii(identifier);
+        return Utility.toAscii(identifier);
     }
 
     public String getEmail() {

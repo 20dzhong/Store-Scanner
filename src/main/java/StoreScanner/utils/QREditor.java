@@ -59,11 +59,12 @@ public class QREditor {
             String result = new MultiFormatReader().decode(bitmap).getText();
             if (!(result.substring(0, 1).equals(":") && result.substring(result.length() - 1).equals(":")))
                 throw new AssertionError("The QR Code: " + result + " is not acceptable!");
-            String[] holder = (Convert.toChar(result)).split("_");
+            String[] holder = (Utility.toChar(result)).split("_");
             return new ID(holder[0], holder[1]);
         } catch (NotFoundException e) {
             return new ID();
         } catch (AssertionError e) {
+            Variable.errorLog = e.getMessage();
             System.out.println(e.getMessage());
             return new ID();
         }

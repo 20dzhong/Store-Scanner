@@ -1,8 +1,8 @@
+import StoreScanner.GUI.FXUI;
 import StoreScanner.GUI.Video;
 import StoreScanner.utils.Constant;
 import StoreScanner.utils.Variable;
 import javafx.application.Application;
-import javafx.beans.NamedArg;
 import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,8 +10,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
@@ -23,7 +21,6 @@ import javax.swing.*;
 //import java.awt.*;
 // import java.awt.Color;
 import javafx.scene.paint.*;
-import java.util.EventObject;
 
 public class FXTest extends Application {
 
@@ -121,12 +118,12 @@ public class FXTest extends Application {
         EventHandler<ActionEvent> reScanProcess = e -> {
             if (!Variable.scanRunning) {
                 new Video.ProcessStream();
-                Variable.status.setText("Scan started");
-                Variable.status.setTextFill(Color.color(0,0,0));
+                FXUI.videoStatus.setText("Scan started");
+                FXUI.videoStatus.setTextFill(Color.color(0,0,0));
             }
             else {
-                Variable.status.setText("Scan already running! Cannot initialize another scan before this one finishes");
-                Variable.status.setTextFill(Color.color(1,0,0));
+                FXUI.videoStatus.setText("Scan already running! Cannot initialize another scan before this one finishes");
+                FXUI.videoStatus.setTextFill(Color.color(1,0,0));
             }
 
         };
@@ -150,7 +147,7 @@ public class FXTest extends Application {
 
         // adding main stream element
         rightPane.add(streamHolder, x, y - 3);
-        rightPane.add(Variable.status, x, y - 2);
+        rightPane.add(FXUI.videoStatus, x, y - 2);
         rightPane.add(southEast, x + 1, y - 3);
 
 
@@ -185,8 +182,8 @@ public class FXTest extends Application {
     // converts swing component into FX node
     private void createSwingContent(final SwingNode swingNode) {
         SwingUtilities.invokeLater(() -> {
-            swingNode.setContent(Video.getFrameAsPanel());
-            Video.getFrameAsPanel();
+            swingNode.setContent(Video.getStreamAsPanel());
+            Video.getStreamAsPanel();
         });
     }
 

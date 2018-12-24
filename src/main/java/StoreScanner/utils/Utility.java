@@ -1,12 +1,13 @@
 package StoreScanner.utils;
 
+import StoreScanner.GUI.FXUI;
 import javafx.beans.NamedArg;
 
 import javafx.scene.paint.Color;
 import javafx.scene.control.Label;
 
 
-public class Convert {
+public class Utility {
     public static String toAscii(String text) {
         StringBuilder builder = new StringBuilder();
         builder.append(":");
@@ -48,6 +49,26 @@ public class Convert {
     public static class ExceedBalanceException extends Throwable {
         public ExceedBalanceException(String message) {
             super(message);
+        }
+    }
+
+    public static void periodicUpdater() {
+        if (!Variable.id.isEmpty) {
+            Utility.setMessage(FXUI.videoStatus, 0, 0.60, 0, ("Scan finished!\nShowing info for: " +
+                    Variable.id.getFirstName() + " " + Variable.id.getLastName()));
+            FXUI.encryptedID.setText(Variable.id.encryptedIdentifier());
+            FXUI.decryptedID.setText(Variable.id.getIdentifier());
+            FXUI.firstNameField.setText(Variable.id.getFirstName());
+            FXUI.lastNameField.setText(Variable.id.getLastName());
+            FXUI.emailField.setText(Variable.id.getEmail());
+            FXUI.balanceField.setText("$ " + Variable.id.getBalance());
+            FXUI.deductionField.setDisable(false);
+            FXUI.deductionField.setText("0.0");
+        }
+
+        if (!Variable.errorLog.equals("")) {
+            Utility.setMessage(FXUI.videoStatus, 1, 0, 0, Variable.errorLog);
+            Variable.errorLog = "";
         }
     }
 }

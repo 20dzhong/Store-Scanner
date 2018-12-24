@@ -13,6 +13,7 @@ public final class Variable {
     }
 
     public static Boolean scanRunning = false;
-    public static Label status = new Label("Scanning...");
-    public static ID id = new ID("Donovan", "Zhong");
+    public static ID id = new ID();
+
+    public static String errorLog = "";
 }

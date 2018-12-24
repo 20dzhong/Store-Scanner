@@ -32,7 +32,7 @@ public class SwingUI extends JFrame implements ActionListener {
         exit.setActionCommand("exit");
         add(exit);
 
-        add(Video.getFrameAsPanel());
+        add(Video.getStreamAsPanel());
 
     }
 
