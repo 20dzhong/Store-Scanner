@@ -14,7 +14,7 @@ everything works
 
 * ~~Although I wish I had a collaborator~~ The project is made by one person, and it is very rough around the edges.
 
-* The "encryption" is very bad and the QR code is easy to duplicate if you know what you are doing. Further steps 
+* The "encryption" is very bad and the QR code is easy to replicate if you know what you are doing. Further steps 
 will be taken to make a better encryption once the project works.
 
 
