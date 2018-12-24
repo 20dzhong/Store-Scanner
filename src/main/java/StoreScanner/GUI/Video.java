@@ -19,7 +19,7 @@ public class Video {
     static {
         List<Webcam> webcamList = Webcam.getWebcams();
         System.out.println(webcamList.toString());
-        if (webcamList.size() > 1) webcam = webcamList.get(1);
+        if (webcamList.size() > 1) webcam = webcamList.get(0);
         else webcam = Webcam.getDefault();
 
         webcam.setViewSize(WebcamResolution.VGA.getSize());
@@ -38,6 +38,7 @@ public class Video {
     public static void setWebcam(int cameraNum) {
         List<Webcam> webcamList = Webcam.getWebcams();
         if (webcamList.size() > 1 && cameraNum < webcamList.size()) webcam = webcamList.get(cameraNum);
+        else webcam = Webcam.getDefault();
     }
 
 

@@ -63,7 +63,6 @@ public class Utility {
             FXUI.emailField.setText(Variable.id.getEmail());
             FXUI.balanceField.setText("$ " + Variable.id.getBalance());
             FXUI.deductionField.setDisable(false);
-            FXUI.deductionField.setText("0.0");
         }
 
         if (!Variable.errorLog.equals("")) {
