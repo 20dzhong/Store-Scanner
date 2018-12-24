@@ -12,7 +12,8 @@ public final class Variable {
     private Variable() {
     }
 
-    public static Boolean scanRunning = false;
+    public static boolean scanRunning = false;
+    public static boolean repainted = false;
     public static ID id = new ID();
 
     public static String errorLog = "";

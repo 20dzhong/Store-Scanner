@@ -53,7 +53,8 @@ public class Utility {
     }
 
     public static void periodicUpdater() {
-        if (!Variable.id.isEmpty) {
+        if (!(Variable.id.isEmpty || Variable.repainted)) {
+            Variable.repainted = true;
             Utility.setMessage(FXUI.videoStatus, 0, 0.60, 0, ("Scan finished!\nShowing info for: " +
                     Variable.id.getFirstName() + " " + Variable.id.getLastName()));
             FXUI.encryptedID.setText(Variable.id.encryptedIdentifier());

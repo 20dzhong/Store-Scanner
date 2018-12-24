@@ -19,7 +19,7 @@ public class Video {
     static {
         List<Webcam> webcamList = Webcam.getWebcams();
         System.out.println(webcamList.toString());
-        if (webcamList.size() > 1) webcam = webcamList.get(0);
+        if (webcamList.size() > 1) webcam = webcamList.get(1);
         else webcam = Webcam.getDefault();
 
         webcam.setViewSize(WebcamResolution.VGA.getSize());
@@ -82,13 +82,16 @@ public class Video {
                     try {
                         if (Variable.id.isEmpty) throw new AssertionError("No QR code found! Hence, no identifier.");
                         break;
-                    } catch (AssertionError ignored) { }
+                    } catch (AssertionError ignored) {
+                    }
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 System.out.println("Scanning thread interrupted!");
             } finally {
+                System.out.println(Variable.id.encryptedIdentifier());
                 Variable.scanRunning = false;
+                Variable.repainted = false;
                 System.out.println("\nTarget found, exiting scanning thread");
             }
             Video.pause();

@@ -1,4 +1,5 @@
 import StoreScanner.GUI.FXUI;
+import StoreScanner.utils.Variable;
 
 import java.io.IOException;
 
