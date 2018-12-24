@@ -1,5 +1,3 @@
-package StoreScanner.utils.Test;
-
 import java.awt.image.BufferedImage;
 import java.util.concurrent.atomic.AtomicReference;
 

@@ -69,26 +69,6 @@ public class FXUI extends Application {
      * }
      **/
 
-    // converts swing component into FX node
-    private void createSwingContent(final SwingNode swingNode) {
-        SwingUtilities.invokeLater(() -> {
-            swingNode.setContent(Video.getFrameAsPanel());
-            Video.getFrameAsPanel();
-        });
-    }
-
-    private GridPane initializeGridPane() {
-        GridPane pane = new GridPane();
-        pane.setMinSize(Constant.minWidth, Constant.minHeight);
-        pane.setPadding(new Insets(Constant.padding));
-        pane.setVgap(Constant.vGap);
-        pane.setHgap(Constant.hGap);
-        pane.setGridLinesVisible(false);
-        pane.setAlignment(Pos.TOP_LEFT);
-
-        return pane;
-    }
-
     private Pane createLeftPane() {
         /*
          * Grid Pane #1, West, Display Information
@@ -234,6 +214,7 @@ public class FXUI extends Application {
 
         reScan.setOnAction(reScanProcess);
 
+        // TODO make this work!
         Button pauseButton = new Button("Pause");
         EventHandler<ActionEvent> pauseProcess = e -> Video.pause();
         pauseButton.setOnAction(pauseProcess);
@@ -257,6 +238,25 @@ public class FXUI extends Application {
         return rightPane;
     }
 
+    // converts swing component into FX node
+    private void createSwingContent(final SwingNode swingNode) {
+        SwingUtilities.invokeLater(() -> {
+            swingNode.setContent(Video.getFrameAsPanel());
+            Video.getFrameAsPanel();
+        });
+    }
+
+    private GridPane initializeGridPane() {
+        GridPane pane = new GridPane();
+        pane.setMinSize(Constant.minWidth, Constant.minHeight);
+        pane.setPadding(new Insets(Constant.padding));
+        pane.setVgap(Constant.vGap);
+        pane.setHgap(Constant.hGap);
+        pane.setGridLinesVisible(false);
+        pane.setAlignment(Pos.TOP_LEFT);
+
+        return pane;
+    }
 
     public static void show() {
         launch();

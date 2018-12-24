@@ -1,5 +1,3 @@
-package StoreScanner.utils.Test;
-
 import StoreScanner.GUI.Video;
 import StoreScanner.utils.Variable;
 

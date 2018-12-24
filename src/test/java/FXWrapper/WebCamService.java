@@ -1,4 +1,4 @@
-package StoreScanner.utils.Test.FXWrapper;
+package FXWrapper;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
