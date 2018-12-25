@@ -7,8 +7,9 @@ The project is built with JavaFX with some Swing components scrambled in. The ho
 everything works
 
 ## TODO
-* Implement Jedis client with Balance and Email.
-
+* Implement Database client with Balance and Email.
+    * If time allows, it will be in SQL, if not, it will use Redis with Jedis client. Worse comes to worst, it'll be a
+    JSON file, but that's no fun.
 
 ## Disclaimer
 
@@ -25,7 +26,7 @@ Dependencies are declared in `Build.gradle` and should be automatically download
 * Java 8, JavaFX
 * Zxing 3.3.0 
 * Sarxos Webcam Library 0.3.10
-* Jedis 2.8.0
+* Jedis 2.8.0 (Maybe)
 
 
 ## Problems
