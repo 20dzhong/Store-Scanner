@@ -100,7 +100,7 @@ public class FXUI extends Application {
     }
 
     /**
-     * TODO How do you do this
+     * TODO How do you do this :(
      * private Button createButton(@NamedArg("Name") String name, @NamedArg("Action") ) {
      * Button button = new Button(name);
      * EventHandler<ActionEvent> event = e -> ;
@@ -108,12 +108,17 @@ public class FXUI extends Application {
      * }
      **/
 
-    private Pane createLeftPane() {
-        /*
-         * Grid Pane #1, West, Display Information
-         * Left side pane
-         */
 
+    /**
+     * serves no other purpose than organization, this creates the left panel of the GUI, with the entry and user
+     * information
+     * <p>
+     * Grid Pane #1, West, Display Information
+     * Left side pane
+     *
+     * @return Gridpane with the infomation filled
+     */
+    private Pane createLeftPane() {
         GridPane leftPane = initializeGridPane();
 
         // encrypted id grid
@@ -185,7 +190,8 @@ public class FXUI extends Application {
         Button submit = new Button("Submit");
         EventHandler<ActionEvent> submitAction = e -> {
             try {
-                Variable.id = new ID("Donovan", "Zhong");
+                // dunno why i needed the below, keeping it in case i messed up
+                // Variable.id = new ID("Donovan", "Zhong");
                 Utility.validate(balance.get(), deductionField.getText());
                 charge.set(Double.valueOf(deductionField.getText()));
                 res.set(balance.get() - charge.get());
@@ -226,11 +232,17 @@ public class FXUI extends Application {
         return leftPane;
     }
 
+
+    /**
+     * serves no other purpose than organization, this creates the left panel of the GUI, with the entry and user
+     * information
+     * <p>
+     * Grid Pane #2, East, Display Information
+     * Right side pane
+     *
+     * @return Gridpane with the video stream and operation buttons filled
+     */
     private Pane createRightPane() {
-        /*
-         * Grid Pane #2, East, Display Video Stream
-         * Right side pane on main pane
-         */
         GridPane rightPane = initializeGridPane();
 
         // adding video container by converting swing node

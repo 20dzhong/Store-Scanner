@@ -8,8 +8,10 @@ everything works
 
 ## TODO
 * Implement Database client with Balance and Email.
-    * If time allows, it will be in SQL, if not, it will use Redis with Jedis client. Worse comes to worst, it'll be a
-    JSON file, but that's no fun.
+    * If time allows, it will be in SQL, if not, it will use Redis with Jedis client. It'll probably be with Jedis, since it's 
+    DUE IN 7 days.
+* Fix problem with balance validation where balance is reset to 0 every time.   
+* Might change the encryption method for QR since it's really long...  
 
 ## Disclaimer
 

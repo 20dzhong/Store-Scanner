@@ -11,6 +11,9 @@ public class ID {
 
     public Boolean isEmpty;
 
+    /**
+     * default empty ID if no arguments
+     **/
     public ID() {
         isEmpty = true;
         firstName = "null";
@@ -20,20 +23,55 @@ public class ID {
         balance = 0;
     }
 
+    /**
+     * Creates a ID using the first and last name from the QR Code, then using the identifier, connect to the database
+     * and set the Email as well as the balance
+     *
+     * @param firstName First name from QR Code
+     * @param lastName  Last name from QR Code
+     */
     public ID(@NamedArg("First Name") String firstName, @NamedArg("Last Name") String lastName) {
         this.firstName = firstName.toLowerCase();
         this.lastName = lastName.toLowerCase();
         this.identifier = (firstName + "_" + lastName).toLowerCase();
 
+        this.balance = fetchBalance(encryptedIdentifier());
 
-        this.balance = 1000.0;
-        this.email = "20" + this.firstName.substring(0,1) + this.lastName + "@athenian.org";
+        this.email = fetchEmail(encryptedIdentifier());
 
         isEmpty = false;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    /**
+     * constructor with all param filled, used for testing purposes
+     **/
+    public ID(@NamedArg("First Name") String firstName, @NamedArg("Last Name") String lastName, @NamedArg("Email")
+            String email, @NamedArg("Balance") double balance) {
+        this.firstName = firstName.toLowerCase();
+        this.lastName = lastName.toLowerCase();
+        this.identifier = (firstName + "_" + lastName).toLowerCase();
+
+        this.balance = 1000.0;
+
+        this.email = "20" + this.firstName.substring(0, 1) + this.lastName + "@athenian.org";
+
+        isEmpty = false;
+    }
+
+    /**
+     * obtain the email info directly from the database if it's not empty, private use only
+     **/
+    private String fetchEmail(String identifier) {
+        // TODO implement function to obtain Email from database
+        return null;
+    }
+
+    /**
+     * obtain the balance directly from the database, private use
+     **/
+    private double fetchBalance(String identifier) {
+        // TODO implement function to obtain balance from database
+        return Integer.parseInt(null);
     }
 
     public String getFirstName() {

@@ -26,8 +26,10 @@ public class QREditor {
         MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
     }
 
+    /**
+     * generates new QR code based on an ID object, will be used in the future to implement an Adding GUI
+     **/
     public static void generate(ID id) {
-
         String PATH = "./src/main/resources/TestImages/" + id.getIdentifier() + ".png";
         if (id.isEmpty) {
             System.out.println("ID is empty, could not create QR Code");
@@ -42,11 +44,23 @@ public class QREditor {
         }
     }
 
+    /**
+     * decode a file, mostly used for testing
+     **/
     public static ID decodeQR(File qrCodeimage) throws IOException {
         BufferedImage bufferedImage = ImageIO.read(qrCodeimage);
         return getName(bufferedImage);
     }
 
+    /**
+     * decode an image, from the video stream to determine whether there is a QR code in the picture or not
+     * if there is, return the dummy ID object with everything filled out, if in any case it failed, whether the
+     * message format is not correct, or there is no QR code, an empty ID will be created with the corresponding error
+     * thrown
+     *
+     * @param qrCodeimage A buffered image from the video stream
+     * @return empty ID object if no QR code, filled ID object if QR code is correct and exist
+     */
     public static ID decodeQR(BufferedImage qrCodeimage) {
         return getName(qrCodeimage);
     }
@@ -60,7 +74,9 @@ public class QREditor {
             if (!(result.substring(0, 1).equals(":") && result.substring(result.length() - 1).equals(":")))
                 throw new AssertionError("The QR Code: " + result + " is not acceptable!");
             String[] holder = (Utility.toChar(result)).split("_");
-            return new ID(holder[0], holder[1]);
+            return new ID(holder[0], holder[1], String.format("20%s%s@athenian.org", holder[0].charAt(0), holder[1]),
+                    1000.0);
+            // return new ID(holder[0], holder[1]);
         } catch (NotFoundException e) {
             return new ID();
         } catch (AssertionError e) {
